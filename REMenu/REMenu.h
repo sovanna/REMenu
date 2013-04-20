@@ -83,8 +83,12 @@ extern NSString *const REBackgroundBlackButtonClick;
 @property (assign, readwrite, nonatomic) CGSize subtitleHighlightedTextShadowOffset;
 @property (assign, readwrite, nonatomic) NSTextAlignment subtitleTextAlignment;
 @property (assign, readwrite, nonatomic) NSTimeInterval animationDuration;
+@property (assign, readwrite, nonatomic) NSTimeInterval bounceAnimationDuration;
+@property (assign, readwrite, nonatomic) BOOL bounce;
 
 - (id)initWithItems:(NSArray *)items;
+- (void)showFromRect:(CGRect)rect inView:(UIView *)view;
+- (void)showInView:(UIView *)view;
 - (void)showFromNavigationController:(UINavigationController *)navigationController;
 - (void)showInView:(UIView *)insideView aboveView:(UIView *)aboveView;
 - (void)closeWithCompletion:(void (^)(void))completion;
